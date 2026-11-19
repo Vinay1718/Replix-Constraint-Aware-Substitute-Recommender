@@ -1,0 +1,22 @@
+import { Router } from "express";
+import healthRoutes from "./health.routes.js";
+import authRoutes from "./auth.routes.js";
+import productRoutes from "./product.routes.js";
+import preferenceRoutes from "./preference.routes.js";
+import feedbackRoutes from "./feedback.routes.js";
+import recommendationRoutes from "./recommendation.routes.js";
+import orderRoutes from "./order.routes.js";
+import demoRoutes from "./demo.routes.js";
+import adminRoutes from "./admin.routes.js";
+
+const router = Router();
+router.use("/health", healthRoutes);
+router.use("/auth", authRoutes);
+router.use("/products", productRoutes);
+router.use("/preferences", preferenceRoutes);
+router.use("/feedback", feedbackRoutes);
+router.use("/recommendations", recommendationRoutes);
+router.use("/orders", orderRoutes);
+router.use("/demo", demoRoutes);
+router.use("/admin", adminRoutes);
+export default router;
